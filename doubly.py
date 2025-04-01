@@ -17,13 +17,11 @@ class doublly_positional_not_sentinel_list:
         @data.setter
         def data(self,data):
         
-            if self.container.size==0:
-                self._data=data
-            else:
-                if isinstance(data,(int,float)):
+               
+            if isinstance(data,(int,float)):
                     self._data=data
-                else:
-                   raise TypeError("the type of the objects of nodes in that list should be numeric ")
+            else:
+                raise TypeError("the type of the objects of nodes in that list should be numeric ")
                     
         def __repr__(self) -> str:
             return f"{self.data}"
